@@ -1,0 +1,114 @@
+[
+  {
+    "num": 1,
+    "nombreES": "GLUTEN",
+    "nombreEN": "GLUTEN",
+    "icono": "",
+    "descripcionES": "Cereales con gluten",
+    "descripcionEN": "Cereals containing gluten "
+  },
+  {
+    "num": 2,
+    "nombreES": "CRUSTÁCEOS",
+    "nombreEN": "SHELLFISH",
+    "icono": "",
+    "descripcionES": "Crustáceos y derivados ",
+    "descripcionEN": "Crustaceans and products thereof "
+  },
+  {
+    "num": 3,
+    "nombreES": "HUEVO",
+    "nombreEN": "EGGS",
+    "icono": "",
+    "descripcionES": "Huevos y derivados ",
+    "descripcionEN": "Eggs and products thereof "
+  },
+  {
+    "num": 4,
+    "nombreES": "PESCADO",
+    "nombreEN": "FISH",
+    "icono": "",
+    "descripcionES": "Pescado y derivados ",
+    "descripcionEN": "Fish and products thereof "
+  },
+  {
+    "num": 5,
+    "nombreES": "CACAHUETES",
+    "nombreEN": "PEANUTS",
+    "icono": "",
+    "descripcionES": "Cacahuetes y derivados           ",
+    "descripcionEN": " Peanuts and products thereof      "
+  },
+  {
+    "num": 6,
+    "nombreES": "SOJA",
+    "nombreEN": "SOY",
+    "icono": " 🫘    ",
+    "descripcionES": " Soja y derivados                 ",
+    "descripcionEN": " Soy and products thereof          "
+  },
+  {
+    "num": 7,
+    "nombreES": "LACTEOS",
+    "nombreEN": "LACTOSA",
+    "icono": " 🥛    ",
+    "descripcionES": " Leche y derivados                ",
+    "descripcionEN": " Milk and products thereof         "
+  },
+  {
+    "num": 8,
+    "nombreES": "NUECES",
+    "nombreEN": "NUTS",
+    "icono": " 🌰    ",
+    "descripcionES": " Frutos de cáscara                ",
+    "descripcionEN": " Tree nuts                         "
+  },
+  {
+    "num": 9,
+    "nombreES": "APIO",
+    "nombreEN": "CELERY",
+    "icono": " 🥬    ",
+    "descripcionES": " Apio y derivados                 ",
+    "descripcionEN": " Celery and products thereof       "
+  },
+  {
+    "num": 10,
+    "nombreES": "MOSTAZA",
+    "nombreEN": "MUSTARD",
+    "icono": " ⚠️    ",
+    "descripcionES": " Mostaza y derivados              ",
+    "descripcionEN": " Mustard and products thereof      "
+  },
+  {
+    "num": 11,
+    "nombreES": "SESAMO",
+    "nombreEN": "SESAME",
+    "icono": " ⚪    ",
+    "descripcionES": " Granos de sésamo                 ",
+    "descripcionEN": " Sesame seeds                      "
+  },
+  {
+    "num": 12,
+    "nombreES": "SULFITOS",
+    "nombreEN": "SULFITES",
+    "icono": " 🍇    ",
+    "descripcionES": " Dióxido de azufre y sulfitos     ",
+    "descripcionEN": " Sulphur dioxide and sulphites     "
+  },
+  {
+    "num": 13,
+    "nombreES": "MOLUSCOS",
+    "nombreEN": "MOLLUSKS",
+    "icono": " 🫛    ",
+    "descripcionES": " Altramuces y derivados           ",
+    "descripcionEN": " Lupin and products thereof        "
+  },
+  {
+    "num": 14,
+    "nombreES": "ALTRANUECES",
+    "nombreEN": "LUPINS",
+    "icono": " 🐚    ",
+    "descripcionES": " Moluscos y derivados             ",
+    "descripcionEN": " Molluscs and products thereof     "
+  }
+]

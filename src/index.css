@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores del logo Chilli Tandori */
+  --primary-color: #8B2C1F; /* Rojo oscuro/marrón rojizo del logo */
+  --secondary-color: #E8D6A8; /* Beige/crema del logo */
+  --accent-red: #C41E3A; /* Rojo brillante del chile */
+  --dark-bg: #2C1810; /* Marrón muy oscuro */
+  --light-bg: #fff;
+  --text-dark: #2C1810;
+  --text-light: #fff;
+  --border-color: #ddd;
+}
+
+/* Importar Google Fonts - Tipografía similar al logo */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+.font-logo {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+body {
+  font-family: 'Lato', 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--light-bg);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Utilidades */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: #a01828;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+  background-color: #e89450;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "es": [
+    {
+      "num": 1000,
+      "nombre": "BATIDOS HINDÚS"
+    },
+    {
+      "num": 1005,
+      "nombre": "BATIDOS DE LECHE"
+    },
+    {
+      "num": 1010,
+      "nombre": "BEBIDAS ESPECIALES"
+    },
+    {
+      "num": 1015,
+      "nombre": "CERVEZAS"
+    },
+    {
+      "num": 1020,
+      "nombre": "ACOMPAÑAMIENTOS"
+    },
+    {
+      "num": 1025,
+      "nombre": "SOPAS"
+    },
+    {
+      "num": 1030,
+      "nombre": "ENSALADAS"
+    },
+    {
+      "num": 1035,
+      "nombre": "ENTRANTES VEGETALES"
+    },
+    {
+      "num": 1040,
+      "nombre": "ENTRANTES NO VEGETALES"
+    },
+    {
+      "num": 1045,
+      "nombre": "SIZZLERS"
+    },
+    {
+      "num": 1050,
+      "nombre": "RECOMENDACIONES DEL CHEF"
+    },
+    {
+      "num": 1055,
+      "nombre": "PLATOS TRADICIONALES"
+    },
+    {
+      "num": 1060,
+      "nombre": "PLATOS VEGETALES"
+    },
+    {
+      "num": 1065,
+      "nombre": "MENÚ INFANTIL"
+    },
+    {
+      "num": 1070,
+      "nombre": "PLATOS BIRYANI"
+    },
+    {
+      "num": 1075,
+      "nombre": "ARROCES"
+    },
+    {
+      "num": 1080,
+      "nombre": "PAN TRADICIONAL DE INDIA"
+    },
+    {
+      "num": 1085,
+      "nombre": "PLATOS INTERNACIONALES"
+    },
+    {
+      "num": 1090,
+      "nombre": "POSTRES"
+    },
+    {
+      "num": 1095,
+      "nombre": "HELADOS"
+    },
+    {
+      "num": 1100,
+      "nombre": "MENUS DIARIOS"
+    },
+    {
+      "num": 1105,
+      "nombre": "ALERGENOS"
+    }
+  ],
+  "en": [
+    {
+      "num": 1000,
+      "nombre": "INDIAN SMOOTHIES"
+    },
+    {
+      "num": 1005,
+      "nombre": "MILKSHAKES"
+    },
+    {
+      "num": 1010,
+      "nombre": "SPECIALTY DRINKS"
+    },
+    {
+      "num": 1015,
+      "nombre": "BEERS"
+    },
+    {
+      "num": 1020,
+      "nombre": "SIDES"
+    },
+    {
+      "num": 1025,
+      "nombre": "SOUPS"
+    },
+    {
+      "num": 1030,
+      "nombre": "SALADS"
+    },
+    {
+      "num": 1035,
+      "nombre": "VEGETABLE STARTERS"
+    },
+    {
+      "num": 1040,
+      "nombre": "NON-VEGETABLE STARTERS"
+    },
+    {
+      "num": 1045,
+      "nombre": "SIZZLERS"
+    },
+    {
+      "num": 1050,
+      "nombre": "CHEF'S RECOMMENDATIONS"
+    },
+    {
+      "num": 1055,
+      "nombre": "TRADITIONAL DISHES"
+    },
+    {
+      "num": 1060,
+      "nombre": "VEGETABLE DISHES"
+    },
+    {
+      "num": 1065,
+      "nombre": "CHILDREN'S MENU"
+    },
+    {
+      "num": 1070,
+      "nombre": "BIRYANI DISHES"
+    },
+    {
+      "num": 1075,
+      "nombre": "RICE DISHES"
+    },
+    {
+      "num": 1080,
+      "nombre": "TRADITIONAL INDIAN BREAD"
+    },
+    {
+      "num": 1085,
+      "nombre": "INTERNATIONAL DISHES"
+    },
+    {
+      "num": 1090,
+      "nombre": "DESSERTS"
+    },
+    {
+      "num": 1095,
+      "nombre": "ICE CREAM"
+    },
+    {
+      "num": 1100,
+      "nombre": "DAILY MENUS"
+    },
+    {
+      "num": 1105,
+      "nombre": "ALLERGENS"
+    }
+  ]
+}

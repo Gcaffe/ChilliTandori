@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "inicio": "INICIO",
+    "nosotros": "NOSOTROS",
+    "carta": "CARTA",
+    "contactar": "CONTACTAR"
+  },
+  "hero": {
+    "welcome": "Bienvenidos a CHILLI TANDORI"
+  },
+  "cta": {
+    "takeaway": "Comida para llevar",
+    "dailymenus": "Menús diarios",
+    "viewmenu": "Ver carta",
+    "ordernow": "Pedir ahora"
+  },
+  "cart": {
+    "title": "Carrito de pedido",
+    "empty": "Tu carrito está vacío",
+    "item": "Plato",
+    "quantity": "Cantidad",
+    "price": "Precio",
+    "total": "Total",
+    "send": "Enviar Pedido",
+    "clear": "Borrar Pedido",
+    "continue": "Seguir Comprando",
+    "customerName": "Nombre",
+    "customerPhone": "Teléfono"
+  },
+  "menu": {
+    "categories": "Categorías",
+    "allergens": "Alérgenos"
+  },
+  "contact": {
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Email",
+    "hours": "Horarios",
+    "monday": "Lunes",
+    "tuesday": "Martes",
+    "wednesday": "Miércoles",
+    "thursday": "Jueves",
+    "friday": "Viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "closed": "Cerrado",
+    "reservations": "Reservas y Pedidos"
+  },
+  "underConstruction": {
+    "title": "Página en construcción",
+    "message": "Estamos preparando contenido especial para ti.",
+    "soon": "Muy pronto disponible"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "inicio": "HOME",
+    "nosotros": "ABOUT US",
+    "carta": "MENU",
+    "contactar": "CONTACT"
+  },
+  "hero": {
+    "welcome": "Welcome to CHILLI TANDORI"
+  },
+  "cta": {
+    "takeaway": "Take Away",
+    "dailymenus": "Daily Menus",
+    "viewmenu": "View Menu",
+    "ordernow": "Order Now"
+  },
+  "cart": {
+    "title": "Order Cart",
+    "empty": "Your cart is empty",
+    "item": "Item",
+    "quantity": "Quantity",
+    "price": "Price",
+    "total": "Total",
+    "send": "Send Order",
+    "clear": "Clear Cart",
+    "continue": "Continue Shopping",
+    "customerName": "Name",
+    "customerPhone": "Phone"
+  },
+  "menu": {
+    "categories": "Categories",
+    "allergens": "Allergens"
+  },
+  "contact": {
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening Hours",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "reservations": "Reservations & Orders"
+  },
+  "underConstruction": {
+    "title": "Page under construction",
+    "message": "We are preparing special content for you.",
+    "soon": "Coming soon"
+  }
+}
