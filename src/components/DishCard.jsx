@@ -33,10 +33,12 @@ const DishCard = ({ plato, alergenos, idioma, showCheckbox = false, onCheckboxCh
               />
             )}
             <div style={styles.nameSection}>
-              {plato.numPlato && (
+              {plato.numPlato && plato.tipoFila !== 'TITULO' && (
                 <span style={styles.number}>{plato.numPlato}.</span>
               )}
-              <span style={styles.name}>{nombre}</span>
+              <span style={plato.tipoFila === 'TITULO' ? styles.nameTitle : styles.name}>
+                {nombre}
+              </span>
             </div>
           </div>
 
@@ -130,6 +132,12 @@ const styles = {
     fontSize: '16px',     // Reducido de 18px
     fontWeight: '600',
     color: '#2C1810'
+  },
+  nameTitle: {
+    fontSize: '18px',        // Un poco más grande
+    fontWeight: '700',       // Negrita
+    color: '#2563eb',        // Azul medio
+    textTransform: 'uppercase'
   },
   allergensCenter: {
     display: 'flex',

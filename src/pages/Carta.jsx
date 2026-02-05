@@ -249,7 +249,7 @@ const styles = {
   platosList: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '8px'              // Reducido de 15px - ESTA ES LA CLAVE
+    gap: '4px'              // Reducido de 15px - ESTA ES LA CLAVE
   },
   emptyState: {
     textAlign: 'center',
