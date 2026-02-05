@@ -36,10 +36,6 @@ const Header = () => {
               <span style={styles.icon}>✉️</span>
               <span style={styles.contactText}>info@chillitandori.com</span>
             </span>
-            <div style={{...styles.socialIcons, ...styles.desktopOnly}}>
-              <a href="#" style={styles.socialLink}>📘</a>
-              <a href="#" style={styles.socialLink}>📷</a>
-            </div>
           </div>
 
           {/* Botón hamburguesa (solo móvil) */}

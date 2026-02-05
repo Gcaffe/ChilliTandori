@@ -60,7 +60,7 @@ const Carta = () => {
         }}
         onClick={() => handleModeChange('normal')}
       >
-        📖 Ver Carta
+        📖 {t('cta.viewmenu')}
       </button>
       <button 
         style={{
@@ -69,7 +69,7 @@ const Carta = () => {
         }}
         onClick={() => handleModeChange('takeaway')}
       >
-        🛵 Para Llevar
+        🛵 {t('cta.takeaway')}
       </button>
       <button 
         style={{
@@ -78,7 +78,7 @@ const Carta = () => {
         }}
         onClick={() => handleModeChange('daily')}
       >
-        🍽️ Menús Diarios
+        🍽️ {t('cta.dailymenus')}
       </button>
     </div>
   );
