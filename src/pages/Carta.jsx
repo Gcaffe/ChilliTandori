@@ -55,8 +55,8 @@ const Carta = () => {
     const mensajeCodificado = encodeURIComponent(mensaje);
     
     // Número de WhatsApp del restaurante
-    // const numeroWhatsApp = '34632469875'; // 632 469 875
-    const numeroWhatsApp = '34629081162'; // PARA PRUEBAS
+    const numeroWhatsApp = '34632469875'; // 632 469 875
+    // const numeroWhatsApp = '34629081162'; // PARA PRUEBAS
         
     // Generar URL de WhatsApp
     const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
