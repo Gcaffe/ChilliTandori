@@ -1,8 +1,20 @@
 import AllergenIcons from './AllergenIcons';
+import { useCart } from '../context/CartContext';
 
-const DishCard = ({ plato, alergenos, idioma, showCheckbox = false, onCheckboxChange }) => {
+const DishCard = ({ plato, alergenos, idioma, showCheckbox = false }) => {
+  const { addToCart, removeFromCart, isInCart } = useCart();
   const nombre = idioma === 'es' ? plato.nombreES : plato.nombreEN;
   const descripcion = idioma === 'es' ? plato.descripcionES : plato.descripcionEN;
+  
+  const handleCheckboxChange = (e) => {
+    if (e.target.checked) {
+      // Checkbox activado → añadir al carrito
+      addToCart(plato);
+    } else {
+      // Checkbox desactivado → quitar del carrito
+      removeFromCart(plato.numPlato);
+    }
+  };
   
   return (
     <div style={styles.card}>
@@ -29,7 +41,8 @@ const DishCard = ({ plato, alergenos, idioma, showCheckbox = false, onCheckboxCh
               <input 
                 type="checkbox"
                 style={styles.checkbox}
-                onChange={(e) => onCheckboxChange && onCheckboxChange(plato, e.target.checked)}
+                checked={isInCart(plato.numPlato)}
+                onChange={handleCheckboxChange}
               />
             )}
             <div style={styles.nameSection}>
@@ -134,9 +147,9 @@ const styles = {
     color: '#2C1810'
   },
   nameTitle: {
-    fontSize: '18px',        // Un poco más grande
-    fontWeight: '700',       // Negrita
-    color: '#2563eb',        // Azul medio
+    fontSize: '18px',
+    fontWeight: '700',
+    color: '#2563eb',
     textTransform: 'uppercase'
   },
   allergensCenter: {

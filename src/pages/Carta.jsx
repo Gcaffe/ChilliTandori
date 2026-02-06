@@ -1,15 +1,73 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMenuData, getPlatosByCategoria } from '../hooks/useMenuData';
+import { useCart } from '../context/CartContext';
 import DishCard from '../components/DishCard';
 import DailyMenu from '../components/DailyMenu';
 import AllergenList from '../components/AllergenList';
+import CartBar from '../components/CartBar';
+import CartModal from '../components/CartModal';
+import OrderForm from '../components/OrderForm';
 
 const Carta = () => {
   const { t } = useTranslation();
   const { categorias, platos, alergenos, loading, error, currentLanguage } = useMenuData();
+  const { cartItems, clearCart } = useCart();
   const [selectedCategoria, setSelectedCategoria] = useState(null);
   const [viewMode, setViewMode] = useState('normal');
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+  const [isOrderFormOpen, setIsOrderFormOpen] = useState(false);
+
+  // Funciones para manejar modales
+  const handleOpenCartModal = () => {
+    setIsCartModalOpen(true);
+  };
+
+  const handleCloseCartModal = () => {
+    setIsCartModalOpen(false);
+  };
+
+  const handleCheckout = () => {
+    setIsCartModalOpen(false);
+    setIsOrderFormOpen(true);
+  };
+
+  const handleCloseOrderForm = () => {
+    setIsOrderFormOpen(false);
+  };
+
+  // Función para enviar pedido por WhatsApp
+  const handleSubmitOrder = ({ nombre, telefono }) => {
+    // Generar mensaje para WhatsApp
+    let mensaje = `Hola, soy ${nombre} (Tel: ${telefono})\n\n`;
+    mensaje += `Mi pedido:\n`;
+    
+    cartItems.forEach(item => {
+      const nombrePlato = currentLanguage === 'es' ? item.nombreES : item.nombreEN;
+      const subtotal = (item.precio * item.quantity).toFixed(2);
+      mensaje += `- ${item.quantity}x ${nombrePlato} - ${subtotal}€\n`;
+    });
+    
+    const total = cartItems.reduce((sum, item) => sum + (item.precio * item.quantity), 0);
+    mensaje += `\nTOTAL: ${total.toFixed(2)}€`;
+    
+    // Codificar mensaje para URL
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    
+    // Número de WhatsApp del restaurante
+    // const numeroWhatsApp = '34632469875'; // 632 469 875
+    const numeroWhatsApp = '34629081162'; // PARA PRUEBAS
+        
+    // Generar URL de WhatsApp
+    const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+    
+    // Abrir WhatsApp
+    window.open(whatsappURL, '_blank');
+    
+    // Cerrar formulario y limpiar carrito
+    setIsOrderFormOpen(false);
+    clearCart();
+  };
 
   if (loading) {
     return (
@@ -34,11 +92,24 @@ const Carta = () => {
   }
 
   const getVisibleCategorias = () => {
+    let filtered;
     if (viewMode === 'daily') {
-      return categorias.filter(cat => cat.num === 1100);
+      filtered = categorias.filter(cat => cat.num === 1100);
     } else {
-      return categorias.filter(cat => cat.num !== 1100);
+      // Filtrar categorías normales (no menús diarios)
+      filtered = categorias.filter(cat => cat.num !== 1100);
     }
+    
+    // Filtrar categorías con peso = 0 (ocultas)
+    filtered = filtered.filter(cat => cat.peso !== 0);
+    
+    // Ordenar por peso (menor peso = primero)
+    // Categorías sin peso (undefined) se tratan como 999
+    return filtered.sort((a, b) => {
+      const pesoA = a.peso || 999;
+      const pesoB = b.peso || 999;
+      return pesoA - pesoB;
+    });
   };
 
   const visibleCategorias = getVisibleCategorias();
@@ -131,9 +202,6 @@ const Carta = () => {
             alergenos={alergenos}
             idioma={currentLanguage}
             showCheckbox={viewMode === 'takeaway'}
-            onCheckboxChange={(plato, checked) => {
-              console.log('Plato seleccionado:', plato, checked);
-            }}
           />
         ))}
       </div>
@@ -168,6 +236,25 @@ const Carta = () => {
         {viewMode !== 'daily' && renderCategorias()}
         {viewMode === 'daily' ? renderDailyMenus() : renderPlatos()}
       </div>
+
+      {/* Mostrar barra de carrito solo en modo takeaway */}
+      {viewMode === 'takeaway' && (
+        <CartBar onOpenModal={handleOpenCartModal} />
+      )}
+
+      {/* Modal del carrito */}
+      <CartModal 
+        isOpen={isCartModalOpen}
+        onClose={handleCloseCartModal}
+        onCheckout={handleCheckout}
+      />
+
+      {/* Formulario de pedido */}
+      <OrderForm 
+        isOpen={isOrderFormOpen}
+        onClose={handleCloseOrderForm}
+        onSubmit={handleSubmitOrder}
+      />
     </div>
   );
 };
@@ -249,7 +336,7 @@ const styles = {
   platosList: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '4px'              // Reducido de 15px - ESTA ES LA CLAVE
+    gap: '8px'              // Reducido de 15px - ESTA ES LA CLAVE
   },
   emptyState: {
     textAlign: 'center',
