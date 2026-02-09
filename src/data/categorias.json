@@ -2,224 +2,224 @@
   "es": [
     {
       "num": 1000,
-      "peso": 710,
+      "peso": 100,
       "nombre": "BATIDOS HINDÚS"
     },
     {
       "num": 1005,
-      "peso": 720,
+      "peso": 105,
       "nombre": "BATIDOS DE LECHE"
     },
     {
       "num": 1010,
-      "peso": 730,
+      "peso": 110,
       "nombre": "BEBIDAS ESPECIALES"
     },
     {
       "num": 1015,
-      "peso": 700,
+      "peso": 115,
       "nombre": "CERVEZAS"
     },
     {
       "num": 1020,
-      "peso": 110,
+      "peso": 120,
       "nombre": "ACOMPAÑAMIENTOS"
     },
     {
       "num": 1025,
-      "peso": 310,
+      "peso": 125,
       "nombre": "SOPAS"
     },
     {
       "num": 1030,
-      "peso": 100,
+      "peso": 130,
       "nombre": "ENSALADAS"
     },
     {
       "num": 1035,
-      "peso": 200,
+      "peso": 135,
       "nombre": "ENTRANTES VEGETALES"
     },
     {
       "num": 1040,
-      "peso": 300,
+      "peso": 140,
       "nombre": "ENTRANTES NO VEGETALES"
     },
     {
       "num": 1045,
-      "peso": 350,
+      "peso": 145,
       "nombre": "SIZZLERS"
     },
     {
       "num": 1050,
-      "peso": 400,
+      "peso": 150,
       "nombre": "RECOMENDACIONES DEL CHEF"
     },
     {
       "num": 1055,
-      "peso": 500,
+      "peso": 155,
       "nombre": "PLATOS TRADICIONALES"
     },
     {
       "num": 1060,
-      "peso": 530,
+      "peso": 160,
       "nombre": "PLATOS VEGETALES"
     },
     {
       "num": 1065,
-      "peso": 0,
+      "peso": 165,
       "nombre": "MENÚ INFANTIL"
     },
     {
       "num": 1070,
-      "peso": 540,
+      "peso": 170,
       "nombre": "PLATOS BIRYANI"
     },
     {
       "num": 1075,
-      "peso": 0,
+      "peso": 175,
       "nombre": "ARROCES"
     },
     {
       "num": 1080,
-      "peso": 550,
+      "peso": 180,
       "nombre": "PAN TRADICIONAL DE INDIA"
     },
     {
       "num": 1085,
-      "peso": 600,
+      "peso": 185,
       "nombre": "PLATOS INTERNACIONALES"
     },
     {
       "num": 1090,
-      "peso": 800,
+      "peso": 190,
       "nombre": "POSTRES"
     },
     {
       "num": 1095,
-      "peso": 810,
+      "peso": 195,
       "nombre": "HELADOS"
     },
     {
       "num": 1100,
-      "peso": 0,
+      "peso": 200,
       "nombre": "MENUS DIARIOS"
     },
     {
       "num": 1105,
-      "peso": 900,
+      "peso": 205,
       "nombre": "ALERGENOS"
     }
   ],
   "en": [
     {
       "num": 1000,
-      "peso": 710,
+      "peso": 100,
       "nombre": "INDIAN SMOOTHIES"
     },
     {
       "num": 1005,
-      "peso": 720,
+      "peso": 105,
       "nombre": "MILKSHAKES"
     },
     {
       "num": 1010,
-      "peso": 730,
+      "peso": 110,
       "nombre": "SPECIALTY DRINKS"
     },
     {
       "num": 1015,
-      "peso": 700,
+      "peso": 115,
       "nombre": "BEERS"
     },
     {
       "num": 1020,
-      "peso": 110,
+      "peso": 120,
       "nombre": "SIDES"
     },
     {
       "num": 1025,
-      "peso": 310,
+      "peso": 125,
       "nombre": "SOUPS"
     },
     {
       "num": 1030,
-      "peso": 100,
+      "peso": 130,
       "nombre": "SALADS"
     },
     {
       "num": 1035,
-      "peso": 200,
+      "peso": 135,
       "nombre": "VEGETABLE STARTERS"
     },
     {
       "num": 1040,
-      "peso": 300,
+      "peso": 140,
       "nombre": "NON-VEGETABLE STARTERS"
     },
     {
       "num": 1045,
-      "peso": 350,
+      "peso": 145,
       "nombre": "SIZZLERS"
     },
     {
       "num": 1050,
-      "peso": 400,
+      "peso": 150,
       "nombre": "CHEF'S RECOMMENDATIONS"
     },
     {
       "num": 1055,
-      "peso": 500,
+      "peso": 155,
       "nombre": "TRADITIONAL DISHES"
     },
     {
       "num": 1060,
-      "peso": 530,
+      "peso": 160,
       "nombre": "VEGETABLE DISHES"
     },
     {
       "num": 1065,
-      "peso": 0,
+      "peso": 165,
       "nombre": "CHILDREN'S MENU"
     },
     {
       "num": 1070,
-      "peso": 540,
+      "peso": 170,
       "nombre": "BIRYANI DISHES"
     },
     {
       "num": 1075,
-      "peso": 0,
+      "peso": 175,
       "nombre": "RICE DISHES"
     },
     {
       "num": 1080,
-      "peso": 550,
+      "peso": 180,
       "nombre": "TRADITIONAL INDIAN BREAD"
     },
     {
       "num": 1085,
-      "peso": 600,
+      "peso": 185,
       "nombre": "INTERNATIONAL DISHES"
     },
     {
       "num": 1090,
-      "peso": 800,
+      "peso": 190,
       "nombre": "DESSERTS"
     },
     {
       "num": 1095,
-      "peso": 810,
+      "peso": 195,
       "nombre": "ICE CREAM"
     },
     {
       "num": 1100,
-      "peso": 0,
+      "peso": 200,
       "nombre": "DAILY MENUS"
     },
     {
       "num": 1105,
-      "peso": 900,
+      "peso": 205,
       "nombre": "ALLERGENS"
     }
   ]
