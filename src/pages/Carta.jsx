@@ -8,6 +8,7 @@ import AllergenList from '../components/AllergenList';
 import CartBar from '../components/CartBar';
 import CartModal from '../components/CartModal';
 import OrderForm from '../components/OrderForm';
+import DishModal from '../components/DishModal';
 
 const Carta = () => {
   const { t } = useTranslation();
@@ -17,6 +18,8 @@ const Carta = () => {
   const [viewMode, setViewMode] = useState('normal');
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [isOrderFormOpen, setIsOrderFormOpen] = useState(false);
+  const [isDishModalOpen, setIsDishModalOpen] = useState(false);
+  const [selectedDish, setSelectedDish] = useState(null);
 
   // Funciones para manejar modales
   const handleOpenCartModal = () => {
@@ -56,8 +59,7 @@ const Carta = () => {
     
     // Número de WhatsApp del restaurante
     const numeroWhatsApp = '34632469875'; // 632 469 875
-    // const numeroWhatsApp = '34629081162'; // PARA PRUEBAS
-        
+    
     // Generar URL de WhatsApp
     const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
     
@@ -67,6 +69,17 @@ const Carta = () => {
     // Cerrar formulario y limpiar carrito
     setIsOrderFormOpen(false);
     clearCart();
+  };
+
+  // Funciones para manejar DishModal
+  const handleOpenDishModal = (plato) => {
+    setSelectedDish(plato);
+    setIsDishModalOpen(true);
+  };
+
+  const handleCloseDishModal = () => {
+    setIsDishModalOpen(false);
+    setSelectedDish(null);
   };
 
   if (loading) {
@@ -95,6 +108,9 @@ const Carta = () => {
     let filtered;
     if (viewMode === 'daily') {
       filtered = categorias.filter(cat => cat.num === 1100);
+    } else if (viewMode === 'gallery') {
+      // Modo galería: solo categorías con fotos (tieneFoto = 1)
+      filtered = categorias.filter(cat => cat.num !== 1100 && cat.tieneFoto === 1);
     } else {
       // Filtrar categorías normales (no menús diarios)
       filtered = categorias.filter(cat => cat.num !== 1100);
@@ -151,6 +167,15 @@ const Carta = () => {
       >
         🍽️ {t('cta.dailymenus')}
       </button>
+      <button 
+        style={{
+          ...styles.modeButton,
+          ...(viewMode === 'gallery' ? styles.modeButtonActive : {})
+        }}
+        onClick={() => handleModeChange('gallery')}
+      >
+        📸 Ver Platos
+      </button>
     </div>
   );
 
@@ -202,6 +227,8 @@ const Carta = () => {
             alergenos={alergenos}
             idioma={currentLanguage}
             showCheckbox={viewMode === 'takeaway'}
+            isClickable={viewMode === 'gallery'}
+            onDishClick={viewMode === 'gallery' ? handleOpenDishModal : null}
           />
         ))}
       </div>
@@ -254,6 +281,14 @@ const Carta = () => {
         isOpen={isOrderFormOpen}
         onClose={handleCloseOrderForm}
         onSubmit={handleSubmitOrder}
+      />
+
+      {/* Modal de detalle del plato */}
+      <DishModal 
+        isOpen={isDishModalOpen}
+        onClose={handleCloseDishModal}
+        plato={selectedDish}
+        alergenos={alergenos}
       />
     </div>
   );

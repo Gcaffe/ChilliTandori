@@ -3,111 +3,133 @@
     {
       "num": 1000,
       "peso": 100,
+      "tieneFoto": 0,
       "nombre": "BATIDOS HINDÚS"
     },
     {
       "num": 1005,
       "peso": 105,
+      "tieneFoto": 0,
       "nombre": "BATIDOS DE LECHE"
     },
     {
       "num": 1010,
       "peso": 110,
+      "tieneFoto": 0,
       "nombre": "BEBIDAS ESPECIALES"
     },
     {
       "num": 1015,
       "peso": 115,
+      "tieneFoto": 0,
       "nombre": "CERVEZAS"
     },
     {
       "num": 1020,
       "peso": 120,
+      "tieneFoto": 0,
       "nombre": "ACOMPAÑAMIENTOS"
     },
     {
       "num": 1025,
       "peso": 125,
+      "tieneFoto": 0,
       "nombre": "SOPAS"
     },
     {
       "num": 1030,
       "peso": 130,
+      "tieneFoto": 0,
       "nombre": "ENSALADAS"
     },
     {
       "num": 1035,
       "peso": 135,
+      "tieneFoto": 1,
       "nombre": "ENTRANTES VEGETALES"
     },
     {
       "num": 1040,
       "peso": 140,
+      "tieneFoto": 1,
       "nombre": "ENTRANTES NO VEGETALES"
     },
     {
       "num": 1045,
       "peso": 145,
+      "tieneFoto": 0,
       "nombre": "SIZZLERS"
     },
     {
       "num": 1050,
       "peso": 150,
+      "tieneFoto": 0,
       "nombre": "RECOMENDACIONES DEL CHEF"
     },
     {
       "num": 1055,
       "peso": 155,
+      "tieneFoto": 0,
       "nombre": "PLATOS TRADICIONALES"
     },
     {
       "num": 1060,
       "peso": 160,
+      "tieneFoto": 0,
       "nombre": "PLATOS VEGETALES"
     },
     {
       "num": 1065,
       "peso": 165,
+      "tieneFoto": 0,
       "nombre": "MENÚ INFANTIL"
     },
     {
       "num": 1070,
       "peso": 170,
+      "tieneFoto": 0,
       "nombre": "PLATOS BIRYANI"
     },
     {
       "num": 1075,
       "peso": 175,
+      "tieneFoto": 0,
       "nombre": "ARROCES"
     },
     {
       "num": 1080,
       "peso": 180,
+      "tieneFoto": 0,
       "nombre": "PAN TRADICIONAL DE INDIA"
     },
     {
       "num": 1085,
       "peso": 185,
+      "tieneFoto": 0,
       "nombre": "PLATOS INTERNACIONALES"
     },
     {
       "num": 1090,
       "peso": 190,
+      "tieneFoto": 0,
       "nombre": "POSTRES"
     },
     {
       "num": 1095,
       "peso": 195,
+      "tieneFoto": 0,
       "nombre": "HELADOS"
     },
     {
       "num": 1100,
       "peso": 200,
+      "tieneFoto": 0,
       "nombre": "MENUS DIARIOS"
     },
     {
       "num": 1105,
       "peso": 205,
+      "tieneFoto": 0,
       "nombre": "ALERGENOS"
     }
   ],
@@ -115,111 +137,133 @@
     {
       "num": 1000,
       "peso": 100,
+      "tieneFoto": 0,
       "nombre": "INDIAN SMOOTHIES"
     },
     {
       "num": 1005,
       "peso": 105,
+      "tieneFoto": 0,
       "nombre": "MILKSHAKES"
     },
     {
       "num": 1010,
       "peso": 110,
+      "tieneFoto": 0,
       "nombre": "SPECIALTY DRINKS"
     },
     {
       "num": 1015,
       "peso": 115,
+      "tieneFoto": 0,
       "nombre": "BEERS"
     },
     {
       "num": 1020,
       "peso": 120,
+      "tieneFoto": 0,
       "nombre": "SIDES"
     },
     {
       "num": 1025,
       "peso": 125,
+      "tieneFoto": 0,
       "nombre": "SOUPS"
     },
     {
       "num": 1030,
       "peso": 130,
+      "tieneFoto": 0,
       "nombre": "SALADS"
     },
     {
       "num": 1035,
       "peso": 135,
+      "tieneFoto": 1,
       "nombre": "VEGETABLE STARTERS"
     },
     {
       "num": 1040,
       "peso": 140,
+      "tieneFoto": 1,
       "nombre": "NON-VEGETABLE STARTERS"
     },
     {
       "num": 1045,
       "peso": 145,
+      "tieneFoto": 0,
       "nombre": "SIZZLERS"
     },
     {
       "num": 1050,
       "peso": 150,
+      "tieneFoto": 0,
       "nombre": "CHEF'S RECOMMENDATIONS"
     },
     {
       "num": 1055,
       "peso": 155,
+      "tieneFoto": 0,
       "nombre": "TRADITIONAL DISHES"
     },
     {
       "num": 1060,
       "peso": 160,
+      "tieneFoto": 0,
       "nombre": "VEGETABLE DISHES"
     },
     {
       "num": 1065,
       "peso": 165,
+      "tieneFoto": 0,
       "nombre": "CHILDREN'S MENU"
     },
     {
       "num": 1070,
       "peso": 170,
+      "tieneFoto": 0,
       "nombre": "BIRYANI DISHES"
     },
     {
       "num": 1075,
       "peso": 175,
+      "tieneFoto": 0,
       "nombre": "RICE DISHES"
     },
     {
       "num": 1080,
       "peso": 180,
+      "tieneFoto": 0,
       "nombre": "TRADITIONAL INDIAN BREAD"
     },
     {
       "num": 1085,
       "peso": 185,
+      "tieneFoto": 0,
       "nombre": "INTERNATIONAL DISHES"
     },
     {
       "num": 1090,
       "peso": 190,
+      "tieneFoto": 0,
       "nombre": "DESSERTS"
     },
     {
       "num": 1095,
       "peso": 195,
+      "tieneFoto": 0,
       "nombre": "ICE CREAM"
     },
     {
       "num": 1100,
       "peso": 200,
+      "tieneFoto": 0,
       "nombre": "DAILY MENUS"
     },
     {
       "num": 1105,
       "peso": 205,
+      "tieneFoto": 0,
       "nombre": "ALLERGENS"
     }
   ]

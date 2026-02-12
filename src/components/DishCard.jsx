@@ -1,7 +1,7 @@
 import AllergenIcons from './AllergenIcons';
 import { useCart } from '../context/CartContext';
 
-const DishCard = ({ plato, alergenos, idioma, showCheckbox = false }) => {
+const DishCard = ({ plato, alergenos, idioma, showCheckbox = false, isClickable = false, onDishClick = null }) => {
   const { addToCart, removeFromCart, isInCart } = useCart();
   const nombre = idioma === 'es' ? plato.nombreES : plato.nombreEN;
   const descripcion = idioma === 'es' ? plato.descripcionES : plato.descripcionEN;
@@ -15,9 +15,22 @@ const DishCard = ({ plato, alergenos, idioma, showCheckbox = false }) => {
       removeFromCart(plato.numPlato);
     }
   };
+
+  const handleCardClick = (e) => {
+    // Solo ejecutar si es clickeable y no es el checkbox
+    if (isClickable && onDishClick && !e.target.closest('input[type="checkbox"]')) {
+      onDishClick(plato);
+    }
+  };
   
   return (
-    <div style={styles.card}>
+    <div 
+      style={{
+        ...styles.card,
+        ...(isClickable ? styles.cardClickable : {})
+      }}
+      onClick={handleCardClick}
+    >
       {/* Foto del plato (si existe) */}
       {plato.numPlato && (
         <div style={styles.imageContainer}>
@@ -89,8 +102,15 @@ const styles = {
     backgroundColor: '#fff',
     borderRadius: '6px',  // Reducido de 8px
     boxShadow: '0 1px 3px rgba(0,0,0,0.1)',  // Reducido
-    transition: 'box-shadow 0.3s',
+    transition: 'box-shadow 0.3s, transform 0.3s',
     cursor: 'default'
+  },
+  cardClickable: {
+    cursor: 'pointer',
+    ':hover': {
+      boxShadow: '0 4px 12px rgba(139, 44, 31, 0.2)',
+      transform: 'translateY(-2px)'
+    }
   },
   imageContainer: {
     flex: '0 0 100px',    // Reducido de 120px
