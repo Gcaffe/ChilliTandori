@@ -17,8 +17,19 @@ const DishCard = ({ plato, alergenos, idioma, showCheckbox = false, isClickable 
   };
 
   const handleCardClick = (e) => {
-    // Solo ejecutar si es clickeable y no es el checkbox
-    if (isClickable && onDishClick && !e.target.closest('input[type="checkbox"]')) {
+    // No ejecutar si se hace click en el checkbox
+    if (e.target.closest('input[type="checkbox"]')) {
+      return;
+    }
+    
+    // En modo gallery, siempre es clickeable
+    if (isClickable && onDishClick) {
+      onDishClick(plato);
+      return;
+    }
+    
+    // En otros modos, solo si tiene foto
+    if (plato.tieneFoto === 1 && onDishClick) {
       onDishClick(plato);
     }
   };
@@ -27,27 +38,13 @@ const DishCard = ({ plato, alergenos, idioma, showCheckbox = false, isClickable 
     <div 
       style={{
         ...styles.card,
-        ...(isClickable ? styles.cardClickable : {})
+        ...(isClickable || plato.tieneFoto === 1 ? styles.cardClickable : {})
       }}
       onClick={handleCardClick}
     >
-      {/* Foto del plato (si existe) */}
-      {plato.numPlato && (
-        <div style={styles.imageContainer}>
-          <img 
-            src={`/images/carta/${plato.numPlato}.jpg`}
-            alt={nombre}
-            style={styles.image}
-            onError={(e) => {
-              e.target.parentElement.style.display = 'none';
-            }}
-          />
-        </div>
-      )}
-
       {/* Información del plato */}
       <div style={styles.content}>
-        {/* Primera línea: checkbox + número + nombre | alérgenos | precio */}
+        {/* Primera línea: checkbox + número + nombre + 📷 | alérgenos | precio */}
         <div style={styles.mainRow}>
           <div style={styles.leftSection}>
             {showCheckbox && (
@@ -65,6 +62,10 @@ const DishCard = ({ plato, alergenos, idioma, showCheckbox = false, isClickable 
               <span style={plato.tipoFila === 'TITULO' ? styles.nameTitle : styles.name}>
                 {nombre}
               </span>
+              {/* Icono 📷 si tiene foto */}
+              {plato.tieneFoto === 1 && (
+                <span style={styles.cameraIcon}>📷</span>
+              )}
             </div>
           </div>
 
@@ -111,17 +112,6 @@ const styles = {
       boxShadow: '0 4px 12px rgba(139, 44, 31, 0.2)',
       transform: 'translateY(-2px)'
     }
-  },
-  imageContainer: {
-    flex: '0 0 100px',    // Reducido de 120px
-    height: '100px',      // Reducido de 120px
-    borderRadius: '4px',  // Reducido de 6px
-    overflow: 'hidden'
-  },
-  image: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover'
   },
   content: {
     flex: '1',
@@ -171,6 +161,11 @@ const styles = {
     fontWeight: '700',
     color: '#2563eb',
     textTransform: 'uppercase'
+  },
+  cameraIcon: {
+    fontSize: '16px',
+    marginLeft: '8px',
+    opacity: 0.7
   },
   allergensCenter: {
     display: 'flex',

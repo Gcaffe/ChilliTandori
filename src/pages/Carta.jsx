@@ -9,6 +9,7 @@ import CartBar from '../components/CartBar';
 import CartModal from '../components/CartModal';
 import OrderForm from '../components/OrderForm';
 import DishModal from '../components/DishModal';
+import GalleryGrid from '../components/GalleryGrid';
 
 const Carta = () => {
   const { t } = useTranslation();
@@ -228,7 +229,7 @@ const Carta = () => {
             idioma={currentLanguage}
             showCheckbox={viewMode === 'takeaway'}
             isClickable={viewMode === 'gallery'}
-            onDishClick={viewMode === 'gallery' ? handleOpenDishModal : null}
+            onDishClick={handleOpenDishModal}
           />
         ))}
       </div>
@@ -255,13 +256,42 @@ const Carta = () => {
     );
   };
 
+  const renderGallery = () => {
+    if (!selectedCategoria) {
+      return (
+        <div style={styles.emptyState}>
+          <p>Selecciona una categoría para ver los platos</p>
+        </div>
+      );
+    }
+
+    // Filtrar solo platos con foto de la categoría seleccionada
+    const platosConFoto = platosCategoria.filter(plato => plato.tieneFoto === 1);
+
+    if (platosConFoto.length === 0) {
+      return (
+        <div style={styles.emptyState}>
+          <p>No hay platos con fotos en esta categoría</p>
+        </div>
+      );
+    }
+
+    return (
+      <GalleryGrid 
+        platos={platosConFoto}
+        onDishClick={handleOpenDishModal}
+      />
+    );
+  };
+
   return (
     <div style={styles.container}>
       <div className="container">
         <h1 style={styles.title} className="font-logo">{t('nav.carta')}</h1>
         {renderModeButtons()}
-        {viewMode !== 'daily' && renderCategorias()}
-        {viewMode === 'daily' ? renderDailyMenus() : renderPlatos()}
+        {viewMode !== 'daily' && viewMode !== 'gallery' && renderCategorias()}
+        {viewMode === 'gallery' && renderCategorias()}
+        {viewMode === 'daily' ? renderDailyMenus() : (viewMode === 'gallery' ? renderGallery() : renderPlatos())}
       </div>
 
       {/* Mostrar barra de carrito solo en modo takeaway */}
