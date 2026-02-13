@@ -69,13 +69,13 @@
     {
       "num": 1055,
       "peso": 155,
-      "tieneFoto": 0,
+      "tieneFoto": 1,
       "nombre": "PLATOS TRADICIONALES"
     },
     {
       "num": 1060,
       "peso": 160,
-      "tieneFoto": 0,
+      "tieneFoto": 1,
       "nombre": "PLATOS VEGETALES"
     },
     {
@@ -203,13 +203,13 @@
     {
       "num": 1055,
       "peso": 155,
-      "tieneFoto": 0,
+      "tieneFoto": 1,
       "nombre": "TRADITIONAL DISHES"
     },
     {
       "num": 1060,
       "peso": 160,
-      "tieneFoto": 0,
+      "tieneFoto": 1,
       "nombre": "VEGETABLE DISHES"
     },
     {
