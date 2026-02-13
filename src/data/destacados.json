@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "numPlato": "23",
+    "nombreES": "ENSALADA MIXTA",
+    "nombreEN": "MIXED GREEN SALAD",
+    "descripcionES": "Tomate, lechuga, cebolla, pepino, maiz y aceitunas",
+    "descripcionEN": "Tomato, lettuce, onion, cucumber, corn, and olives",
+    "precio": 3.5,
+    "alergenos": ""
+  },
+  {
+    "id": 2,
+    "numPlato": "25",
+    "nombreES": "CEBOLLA BHAJI",
+    "nombreEN": "ONION BHAJI",
+    "descripcionES": "Pastel crujiente de cebolla rebozada en harina de garbanzos y frita",
+    "descripcionEN": "Crispy onion cake coated in gram flour and fried",
+    "precio": 4.9,
+    "alergenos": ""
+  },
+  {
+    "id": 3,
+    "numPlato": "26",
+    "nombreES": "PAKORA VEGETAL",
+    "nombreEN": "VEGETABLE PAKORA",
+    "descripcionES": "Veduras rebozadas en harina de garbanzos y fritas",
+    "descripcionEN": "vegetables coated in gram flour and fried",
+    "precio": 4.9,
+    "alergenos": ""
+  },
+  {
+    "id": 4,
+    "numPlato": "63",
+    "nombreES": "POLLO TIKKA MASALA",
+    "nombreEN": "CHICKEN TIKKA MASALA",
+    "descripcionES": "Pollo en salsa cremosa de tomate",
+    "descripcionEN": "Chicken in creamy tomato sauce",
+    "precio": 10.9,
+    "alergenos": "8"
+  },
+  {
+    "id": 5,
+    "numPlato": "68",
+    "nombreES": "POLLO KORMA",
+    "nombreEN": "CHICKEN KORMA",
+    "descripcionES": "Pollo en salsa suave de frutos secos",
+    "descripcionEN": "Chicken in a mild nut sauce",
+    "precio": 10.9,
+    "alergenos": "8"
+  },
+  {
+    "id": 6,
+    "numPlato": "75",
+    "nombreES": "GAMBAS CURRY",
+    "nombreEN": "PRAWN CURRY",
+    "descripcionES": "Gambas en salsa especiada",
+    "descripcionEN": "Prawns in spiced sauce",
+    "precio": 11.9,
+    "alergenos": "2"
+  },
+  {
+    "id": 7,
+    "numPlato": "134b",
+    "nombreES": "CHANA CHAAT",
+    "nombreEN": "CHANA CHAAT",
+    "descripcionES": "Garbanzos con especias y limón",
+    "descripcionEN": "Chickpeas with spices and lemon",
+    "precio": 6.9,
+    "alergenos": ""
+  }
+]

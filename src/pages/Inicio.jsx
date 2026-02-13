@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Carousel from '../components/Carousel';
+import FeaturedDishes from '../components/FeaturedDishes';
 
 const Inicio = () => {
   const { t } = useTranslation();
@@ -12,7 +13,6 @@ const Inicio = () => {
     '/images/general/INI_3.jpg',
     '/images/general/INI_4.jpg',
     '/images/general/INI_5.jpg',
-    '/images/general/INI_6.jpg'
   ];
 
   return (
@@ -24,16 +24,17 @@ const Inicio = () => {
         {/* Carrusel de imágenes */}
         <Carousel images={carouselImages} autoPlayInterval={5000} />
 
-        {/* Sección adicional (opcional) */}
+        {/* Sección de info (minimizada) */}
         <div style={styles.infoSection}>
-          <h2 style={styles.sectionTitle}>Descubre nuestra cocina</h2>
           <p style={styles.sectionText}>
             En <span className="font-logo" style={styles.brandName}>CHILLI TANDORI</span> te 
-            ofrecemos los auténticos sabores de la India. Cada plato es preparado con especias 
-            tradicionales y ingredientes frescos.
+            ofrecemos los auténticos sabores de la India.
           </p>
         </div>
       </div>
+
+      {/* Galería de platos destacados */}
+      <FeaturedDishes />
     </div>
   );
 };
@@ -56,23 +57,17 @@ const styles = {
     color: '#666'
   },
   infoSection: {
-    marginTop: '60px',
+    marginTop: '30px',
     textAlign: 'center',
-    padding: '40px 20px',
+    padding: '20px',
     backgroundColor: '#F9F9F9',
-    borderRadius: '10px'
-  },
-  sectionTitle: {
-    fontSize: '32px',
-    marginBottom: '20px',
-    color: '#8B2C1F'
+    borderRadius: '8px'
   },
   sectionText: {
-    fontSize: '18px',
-    lineHeight: '1.8',
+    fontSize: '16px',
+    lineHeight: '1.6',
     color: '#666',
-    maxWidth: '800px',
-    margin: '0 auto'
+    margin: 0
   },
   brandName: {
     color: '#8B2C1F',

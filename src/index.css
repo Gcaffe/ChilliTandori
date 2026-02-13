@@ -174,3 +174,437 @@ main {
     padding: 10px;
   }
 }
+
+/* Estilos para DishModal - Añadir al final de index.css */
+
+/* Modal overlay */
+.dish-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal container */
+.dish-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 1001;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: slideIn 0.3s ease;
+}
+
+/* Botón cerrar */
+.dish-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #8B2C1F;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  z-index: 1002;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Contenido del modal */
+.dish-modal-content {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Contenedor de imagen */
+.dish-modal-image-container {
+  flex: 0 0 400px;
+  height: 400px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.dish-modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sección de información */
+.dish-modal-info {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* Header (número + nombre) */
+.dish-modal-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.dish-modal-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #8B2C1F;
+  flex-shrink: 0;
+}
+
+.dish-modal-name {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2C1810;
+  font-family: 'Cinzel', serif;
+}
+
+/* Descripción */
+.dish-modal-description {
+  font-size: 16px;
+  color: #8B2C1F;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Alérgenos */
+.dish-modal-allergens {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: #F9F9F9;
+  border-radius: 8px;
+  border: 1px solid #E8D6A8;
+}
+
+.dish-modal-allergens-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2C1810;
+  flex-shrink: 0;
+}
+
+/* Precio */
+.dish-modal-price-section {
+  padding: 15px;
+  background-color: #F9F9F9;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.dish-modal-price {
+  font-size: 36px;
+  font-weight: 700;
+  color: #8B2C1F;
+}
+
+/* Botón añadir */
+.dish-modal-add-button {
+  background-color: #8B2C1F;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ===== RESPONSIVE MÓVIL ===== */
+@media (max-width: 768px) {
+  /* Modal en móvil */
+  .dish-modal {
+    width: 95%;
+    max-width: 100%;
+    max-height: 95vh;
+  }
+
+  /* Contenido vertical en móvil */
+  .dish-modal-content {
+    flex-direction: column;
+  }
+
+  /* Imagen más pequeña en móvil */
+  .dish-modal-image-container {
+    flex: none;
+    width: 100%;
+    height: 250px;
+  }
+
+  /* Info ocupa el resto */
+  .dish-modal-info {
+    padding: 20px;
+    max-height: calc(95vh - 250px);
+  }
+
+  /* Textos más pequeños en móvil */
+  .dish-modal-name {
+    font-size: 22px;
+  }
+
+  .dish-modal-number {
+    font-size: 16px;
+  }
+
+  .dish-modal-description {
+    font-size: 14px;
+  }
+
+  .dish-modal-price {
+    font-size: 28px;
+  }
+
+  /* Alérgenos en columna si es necesario */
+  .dish-modal-allergens {
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 10px;
+  }
+}
+
+/* Móvil muy pequeño */
+@media (max-width: 480px) {
+  .dish-modal-info {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .dish-modal-name {
+    font-size: 20px;
+  }
+
+  .dish-modal-add-button {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+/* Estilos para FeaturedDishes (Galería Inicio) - Añadir a index.css */
+
+/* Sección */
+.featured-dishes {
+  padding: 60px 0;
+  background-color: #F9F9F9;
+}
+
+/* Título */
+.featured-dishes-title {
+  text-align: center;
+  font-size: 36px;
+  color: #8B2C1F;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Grid de platos */
+.featured-dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjeta individual */
+.featured-dish-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.featured-dish-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(139, 44, 31, 0.25);
+}
+
+/* Contenedor de imagen */
+.featured-dish-image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.featured-dish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.featured-dish-card:hover .featured-dish-image {
+  transform: scale(1.08);
+}
+
+/* Información (nombre + precio) */
+.featured-dish-info {
+  padding: 20px;
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Nombre del plato */
+.featured-dish-name {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #2C1810;
+  line-height: 1.4;
+  font-family: 'Cinzel', serif;
+}
+
+/* Precio */
+.featured-dish-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #8B2C1F;
+}
+
+/* ===== RESPONSIVE TABLET ===== */
+@media (max-width: 1200px) {
+  .featured-dishes-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .featured-dishes-title {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+}
+
+/* ===== RESPONSIVE MÓVIL (portrait/vertical) ===== */
+@media (max-width: 768px) and (orientation: portrait) {
+  .featured-dishes {
+    padding: 40px 0;
+  }
+
+  .featured-dishes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .featured-dishes-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .featured-dish-image-container {
+    height: 280px;
+  }
+
+  .featured-dish-info {
+    padding: 18px;
+    min-height: 90px;
+  }
+
+  .featured-dish-name {
+    font-size: 16px;
+  }
+
+  .featured-dish-price {
+    font-size: 20px;
+  }
+}
+
+/* ===== RESPONSIVE MÓVIL (landscape/horizontal) ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+  .featured-dishes {
+    padding: 40px 0;
+  }
+
+  .featured-dishes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .featured-dishes-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .featured-dish-image-container {
+    height: 200px;
+  }
+
+  .featured-dish-info {
+    padding: 15px;
+    min-height: 80px;
+  }
+
+  .featured-dish-name {
+    font-size: 15px;
+  }
+
+  .featured-dish-price {
+    font-size: 18px;
+  }
+}
+
+/* ===== MÓVIL MUY PEQUEÑO ===== */
+@media (max-width: 480px) {
+  .featured-dishes {
+    padding: 30px 0;
+  }
+
+  .featured-dishes-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .featured-dish-image-container {
+    height: 250px;
+  }
+
+  .featured-dish-info {
+    padding: 15px;
+  }
+
+  .featured-dish-name {
+    font-size: 15px;
+  }
+
+  .featured-dish-price {
+    font-size: 18px;
+  }
+}
