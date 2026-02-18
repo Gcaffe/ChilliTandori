@@ -1,16 +1,6 @@
 [
   {
     "id": 1,
-    "numPlato": "23",
-    "nombreES": "ENSALADA MIXTA",
-    "nombreEN": "MIXED GREEN SALAD",
-    "descripcionES": "Tomate, lechuga, cebolla, pepino, maiz y aceitunas",
-    "descripcionEN": "Tomato, lettuce, onion, cucumber, corn, and olives",
-    "precio": 3.5,
-    "alergenos": ""
-  },
-  {
-    "id": 2,
     "numPlato": "25",
     "nombreES": "CEBOLLA BHAJI",
     "nombreEN": "ONION BHAJI",
@@ -20,7 +10,7 @@
     "alergenos": ""
   },
   {
-    "id": 3,
+    "id": 2,
     "numPlato": "26",
     "nombreES": "PAKORA VEGETAL",
     "nombreEN": "VEGETABLE PAKORA",
@@ -30,7 +20,7 @@
     "alergenos": ""
   },
   {
-    "id": 4,
+    "id": 3,
     "numPlato": "63",
     "nombreES": "POLLO TIKKA MASALA",
     "nombreEN": "CHICKEN TIKKA MASALA",
@@ -40,7 +30,7 @@
     "alergenos": "8"
   },
   {
-    "id": 5,
+    "id": 4,
     "numPlato": "68",
     "nombreES": "POLLO KORMA",
     "nombreEN": "CHICKEN KORMA",
@@ -50,7 +40,7 @@
     "alergenos": "8"
   },
   {
-    "id": 6,
+    "id": 5,
     "numPlato": "75",
     "nombreES": "GAMBAS CURRY",
     "nombreEN": "PRAWN CURRY",
@@ -60,7 +50,7 @@
     "alergenos": "2"
   },
   {
-    "id": 7,
+    "id": 6,
     "numPlato": "134b",
     "nombreES": "CHANA CHAAT",
     "nombreEN": "CHANA CHAAT",
